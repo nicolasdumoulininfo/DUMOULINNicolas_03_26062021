@@ -1,6 +1,12 @@
 /*Ensembles des variables*/
-.h1 {
+/*les fonctions*/
+h1 {
+  font-family: "Shrikland";
   color: red;
+}
+
+body {
+  font-family: "roboto";
 }
 
 .btn {
@@ -10,8 +16,10 @@
   font-size: 2rem;
   font-family: sans-serif;
   background-color: #ff79da;
-  cursor: pointer;
-
+  width: 50%;
+}
+.btn:hover {
+  background-color: #ff99e3;
 }
 
 /*# sourceMappingURL=style.css.map */

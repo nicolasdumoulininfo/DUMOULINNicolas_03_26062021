@@ -1,0 +1,10 @@
+/*les fonctions*/
+
+@function pastel($clr){
+    $hue: hue($clr);
+    $sat: 100%;
+    $light: 80%;
+    $pastel: hsl($hue, $sat, $light);
+
+    @return $pastel;
+}
