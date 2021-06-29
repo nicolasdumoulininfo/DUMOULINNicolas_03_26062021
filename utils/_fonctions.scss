@@ -8,3 +8,12 @@
 
     @return $pastel;
 }
+
+@function foncir($clr){
+    $hue: hue($clr);
+    $sat: 100%;
+    $light: 50%;
+    $foncir: hsl($hue, $sat, $light);
+
+    @return $foncir;
+}
