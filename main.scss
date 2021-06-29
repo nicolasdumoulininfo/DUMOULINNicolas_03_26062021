@@ -1,0 +1,23 @@
+@import "./utils/variables";
+@import "./utils/fonctions";
+@import "./utils/mixins";
+
+h1{
+    font-family:"Shrikland";
+    color:red;
+}
+
+body{
+    font-family:"roboto";
+}
+.btn{
+    color:white;
+    padding: 1.5rem 3rem;
+    border-radius: 10rem;
+    font-size: 2rem;
+    font-family:sans-serif;
+    background-color: $couleur-secondaire;
+    width: 50%;
+    
+    
+}

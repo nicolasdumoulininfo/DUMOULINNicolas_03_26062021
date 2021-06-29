@@ -1,0 +1,22 @@
+{
+  "name": "p3_dumoulin_nicolas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "sass": "sass --watch ./main.scss:./CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasdumoulininfo/DUMOULINNicolas_03_26062021.git"
+  },
+  "author": "N dumoulin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolasdumoulininfo/DUMOULINNicolas_03_26062021/issues"
+  },
+  "homepage": "https://github.com/nicolasdumoulininfo/DUMOULINNicolas_03_26062021#readme"
+}
