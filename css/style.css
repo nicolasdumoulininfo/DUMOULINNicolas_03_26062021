@@ -2,53 +2,121 @@
 /*les fonctions*/
 @font-face {
   font-family: "shrikhandregular";
-  src: url("shrikhand-regular-webfont.woff2") format("woff2"), url("shrikhand-regular-webfont.woff") format("woff");
+  src: url("fonts/shrikhand-regular-webfont.woff2") format("woff2"), url("fonts/shrikhand-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "roboto_condensedregular";
-  src: url("robotocondensed-regular-webfont.woff2") format("woff2"), url("robotocondensed-regular-webfont.woff") format("woff");
+  src: url("fonts/robotocondensed-regular-webfont.woff2") format("woff2"), url("fonts/robotocondensed-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+body {
+  font-family: "roboto_condensedregular";
+  font-size: 1.6rem;
+}
+
 h1 {
   font-family: "shrikhandregular";
   color: red;
-  font-size: 4rem;
+  font-size: 6rem;
   font-style: italic;
   color: black;
   font-weight: bolder;
   text-align: center;
 }
 
-body {
-  font-family: "roboto_condensedregular";
-  font-size: 1.5rem;
+.heading {
+  display: flex;
+  width: 100%;
+  box-shadow: grey;
+  background-color: rgba(224, 203, 203, 0.253);
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.rechercher {
+.heading--localisation {
   display: flex;
-  border: none;
-  font-size: 1.2rem;
-  text-align: left;
-  background-color: rgba(163, 159, 159, 0.253);
-  box-shadow: grey;
-  padding: 2rem 5rem;
+  flex-direction: row;
+  background-color: rgba(206, 189, 189, 0.253);
+  box-shadow: inset 1px 6px rgba(190, 190, 187, 0.3);
+  width: 100%;
+}
+
+.heading--localisation--icone {
+  width: 40%;
+  padding-top: 1.9rem;
+  text-align: right;
+  font-size: 2rem;
+}
+
+.heading--localisation--text {
   width: 60%;
+  padding-left: 1.6rem;
+  text-align: left;
+  font-size: 2.1rem;
+  font-weight: bold;
 }
 
 .btn {
   color: white;
-  padding: 1.5rem 3rem;
+  padding: 2.5rem 4rem;
   border-radius: 10rem;
-  font-size: 2rem;
-  font-family: sans-serif;
-  background-color: #ff79da;
+  font-size: 3rem;
+  font-weight: 30;
+  background: linear-gradient(#ff79da, #9356DC);
   cursor: pointer;
-  width: 50%;
+  width: 30rem;
 }
 .btn:hover {
+  background-color: #ff99e3;
+}
+
+.heading--text {
+  font-size: 3rem;
+}
+
+/*Partie Fonctionnement*/
+.fonctionnemnt {
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.btn_fonctionnement_numeroetape {
+  position: absolute;
+  left: -40px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  padding: 15px 25px;
+  color: white;
+}
+
+.btn_fonctionnement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: black;
+  padding: 1.5rem 3rem;
+  border-radius: 40px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: rgba(206, 189, 189, 0.253);
+  cursor: pointer;
+  width: 45rem;
+}
+.btn_fonctionnement:hover {
   background-color: #ff99e3;
 }
 
