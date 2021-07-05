@@ -8,6 +8,7 @@
   },
   "scripts": {
     "sass": "sass --watch ./main.scss:./CSS/style.css"
+
   },
   "repository": {
     "type": "git",

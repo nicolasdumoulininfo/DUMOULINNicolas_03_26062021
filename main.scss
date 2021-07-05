@@ -19,22 +19,60 @@
     font-style: normal;
 }
 
-body{
+/*body{
     font-family:'roboto_condensedregular';
     font-size: 1.6rem;
 }
-
-h1{
+*/
+.header{
     font-family:'shrikhandregular';
-    color:red;
+    color:rgb(238, 98, 98);
     font-size: 6rem;
     font-style: italic;
     color: black;
     font-weight: bolder;
     text-align: center;
 }
+/*h2{
+    font-size: 4.1rem;
+    font-weight: bold;
+    font-family: 'shrikhandregular';
+}
+*/
+.titre{
+    font-weight: bold;
+    font-family: 'shrikhandregular';
+    &--h2-annonce{
+        font-size: 4.1rem;
+        font-family: "roboto_condensedregular";
+        }
+    &--italic{
+            /*font-size: 3.1rem;*/
+            font-family: "roboto_condensedregular";
+        }   
+    &--h2-titre{
+        font-size: 4.1rem;
+        padding-left:0.6em;
+        &--couleur{
+            background-color:$couleur-fond-gris-localisation;
+        }
+    }
+   
+}
+/*
+.h2-size{
+        padding-left:0.6em;
+        font-weight: bold;
+        font-family: 'shrikhandregular';
+    }
+*/
 
-.heading{
+/*question pourquoi quand je valide ceci je decale mon bouton?
+.text__size{
+    font-size: 3.1rem;
+}
+*/
+.annonce{
     display: flex;
     width: 100%;
     box-shadow: grey;
@@ -43,9 +81,12 @@ h1{
     text-align: center;
     justify-content: center;
     align-items: center;
+    &--text__size{
+        font-size: 10rem;
+    }
 }
 
-.heading--localisation{
+.annonce__localisation{
         display:flex;
         flex-direction:row;
         background-color:$couleur-fond-gris-localisation;
@@ -53,14 +94,14 @@ h1{
         width: 100%;
 
     }
-.heading--localisation--icone{
+.annonce__localisation__icone{
     width: 40%;
     padding-top:1.9rem;
     text-align:right;
     font-size: 2rem;
 }
 
-.heading--localisation--text{   
+.annonce__localisation__text{   
     width: 60%;
     padding-left:1.6rem;
     text-align:left;
@@ -82,12 +123,9 @@ h1{
     }
 }
 
-.heading--text{
-    font-size:3rem;
-
-}
 
 /*Partie Fonctionnement*/
+
 .fonctionnemnt{
     position:relative;
     margin-left: 5px;
@@ -103,11 +141,12 @@ h1{
 
     .btn_fonctionnement_numeroetape{
         position:absolute;
-        left:-40px;
+        left:-35px;
         border-radius:50%;
         background-color: $couleur-primaire;
-        padding:15px 25px;
+        padding:10px 20px;
         color:white;
+        font-size: 0.8em;
     }
 
     .btn_fonctionnement{
@@ -116,14 +155,97 @@ h1{
         align-items: center;
         position:relative;
         color:black;
-        padding:1.5rem 3rem;
-        border-radius: 40px;
-        font-size: 2.5rem;
+        padding:0.5em 2.2em 0.5em 0em;
+        border-radius: 50px;
+        font-size: 2.7rem;
         font-weight: bold;
         background:$couleur-fond-gris-localisation;
         cursor: pointer;
-        width: 45rem;
+        width: 48rem;
+        margin:0px 20px 60px 0px;
+        box-shadow:2px 15px 2px 1px #f8f8f8;
         &:hover {
             background-color:pastel($couleur-secondaire);
         }
     }
+.position-icone{
+    margin-right:1.4em;
+    font-size: 1.2em;
+    &.spe-size{
+        font-size: 1em; 
+    }
+    &.couleur{
+        color:$couleur-primaire;
+  }
+    
+}
+
+/*partie Restaurant*/
+
+
+.conteneur-Resto{
+    background-color: $couleur-fond-gris-localisation;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .conteneur-Resto__cards{
+        margin-top:2em;
+        width:90%;
+        display: flex;
+        position:relative;
+        flex-direction: column;
+        border-radius: 25px;
+        height:650px;
+        background-color: white;
+        align-content: center;
+    
+       
+
+        .conteneur-Resto__cards__photo{
+         width:100%;
+         height:70%;
+         background-size:cover;
+         border-radius: 20px 20px 0 0 ;
+        } 
+
+        .spe-note-enchante{
+            position: absolute;
+            
+        }
+
+    
+            
+    }
+}
+
+.conteneur-Resto__cards__text{
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+}
+
+.conteneur-Resto__cards__text__like{
+    position: absolute;
+    right:40px;
+    top:60px;
+    font-size: 4em;
+       } 
+.conteneur-Resto__cards__text__niv1{
+    font-size:3em;
+    font-family: "roboto_condensedregular";
+    font-weight: bold;
+    color:black;
+    margin-bottom: 0px;
+    padding-left:1em;
+}
+
+.conteneur-Resto__cards__text__niv2{
+    font-family: "roboto_condensedregular";
+    font-size:3em;
+    padding-left:1em;
+    margin-top:0px;
+}
+
