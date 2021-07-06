@@ -33,23 +33,24 @@
     font-family: 'shrikhandregular';
 }
 */
-.titre {
+.annonce {
   font-weight: bold;
   font-family: "shrikhandregular";
 }
-.titre--h2-annonce {
+.annonce__h2 {
   font-size: 4.1rem;
   font-family: "roboto_condensedregular";
 }
-.titre--italic {
+.annonce__commentaire {
   /*font-size: 3.1rem;*/
+  color: grey;
   font-family: "roboto_condensedregular";
 }
-.titre--h2-titre {
+.annonce--h2-titre {
   font-size: 4.1rem;
   padding-left: 0.6em;
 }
-.titre--h2-titre--couleur {
+.annonce--h2-titre--couleur {
   background-color: rgba(206, 189, 189, 0.253);
   font-size: 4.1rem;
   padding-left: 0.6em;
@@ -73,7 +74,7 @@
 .annonce {
   display: flex;
   width: 100%;
-  box-shadow: grey;
+  box-shadow: Grey;
   background-color: rgba(224, 203, 203, 0.253);
   flex-direction: column;
   text-align: center;
@@ -159,10 +160,10 @@
   cursor: pointer;
   width: 48rem;
   margin: 0px 20px 60px 0px;
-  box-shadow: 2px 15px 2px 1px #f8f8f8;
+  box-shadow: 0px 8px 14px grey;
 }
 .btn_fonctionnement:hover {
-  background-color: #ff99e3;
+  background-color: #ffdff6;
 }
 
 .position-icone {
@@ -223,11 +224,13 @@
 
 .btn-nouveau {
   position: absolute;
-  cursor: pointer;
-  right: 30px;
-  top:-450px;
-  font-size: 2.3em;
-  padding:16px 25px 16px 25px;
+  right: 10px;
+  font-size: 2.2em;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+  text-align: center;
   background-color: #99e2d0;
   color: #0e3a0e;
   font-weight: bold;

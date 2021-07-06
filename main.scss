@@ -39,15 +39,16 @@
     font-family: 'shrikhandregular';
 }
 */
-.titre{
+.annonce{
     font-weight: bold;
     font-family: 'shrikhandregular';
-    &--h2-annonce{
+    &__h2{
         font-size: 4.1rem;
         font-family: "roboto_condensedregular";
         }
-    &--italic{
+    &__commentaire{
             /*font-size: 3.1rem;*/
+            color: grey;
             font-family: "roboto_condensedregular";
         }   
     &--h2-titre{
@@ -80,7 +81,7 @@
 .annonce{
     display: flex;
     width: 100%;
-    box-shadow: grey;
+    box-shadow: Grey;
     background-color: $couleur-fond-gris;
     flex-direction: column;
     text-align: center;
@@ -168,9 +169,11 @@
         cursor: pointer;
         width: 48rem;
         margin:0px 20px 60px 0px;
-        box-shadow:2px 15px 2px 1px #f8f8f8;
+        box-shadow:0px 8px 14px grey;
         &:hover {
-            background-color:pastel($couleur-secondaire);
+            background-color:lighten($couleur-secondaire, 20%);
+            
+        
         }
     }
 .position-icone{
