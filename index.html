@@ -10,32 +10,28 @@
     <body>
 
         <!--Titre en tête-->
-            <header>
-                <h1 class="header">ohmyfood</h1>
-            </header>
+            <h1 class="header__titreprincipal">ohmyfood</h1>
 
         <!--Bloc recherche localisation restaurant-->
             <section class="annonce">
 
-                <div class="annonce__localisation">
-                    <div class="annonce__localisation__icone">
+                <div class="annonce__local">
+                    <div class="annonce__local__icone">
                         <span><i class="fas fa-map-marker-alt"></i></span>
                     </div>
 
-                    <div class="annonce__localisation__text">
+                    <div class="annonce__local__text">
                         <p>Paris, Belleville</p>
                     </div>
                 </div>
 
-                <div>
+                <div class="annonce__text">
                     <!--Textes et message introduction - A CORRIGER (LES DOUBLES TIRETS)-->       
-                    <div>
-                        <h2 class="annonce__h2">Réserver le menu qui</br>vous convient</h2>
-                    </div>
+                    <div class="annonce__text__h2first">Réserver le menu qui</div>
+                    <div class="annonce__text__h2">vous convient</div>
 
-                    <div>
-                        <p class="annonce__commentaire">Découvrez des restaurants d'exception,</br>selectionnés par nos soins.</p>
-                    </div>
+                    <div class="annonce__text__commentairefirst">Découvrez des restaurants d'exception</div>
+                    <div class="annonce__text__commentaire">selectionnés par nos soins.</div>
     
                     <!--bouton nos restaurants-->
                      <div>
@@ -47,25 +43,27 @@
          
 
         <!--Bloc Fonctionnement-->
-            <section class="bloc-fonctionnement">
-                <h2 class="titre--h2-titre">Fonctionnement</h2>
 
+            <h2 class="titre-fonctionnement">Fonctionnement</h2>
+
+            <section class="container-fonct">
+               
                 <!--Bloc bouton fonctionnement-->
-                    <div class="fonctionnemnt">
+                    <div class="container-fonct__bloc-bouton">
 
                         <!--choisissez un restaurant-->
-                        <div class="btn_fonctionnement">
+                        <div class="container-fonct__bloc-bouton__btn">
                             <span>
                                 <i class="fa-mobile-alt fas position-icone"></i>
                             </span>
                             <div>
                                 <p>Choisissez un restaurant</p>
                             </div>
-                            <p class="btn_fonctionnement_numeroetape">1</p>
+                            <p class="container-fonct__bloc-bouton__btn__numeroetape">1</p>
                         </div>
                       
                          <!--Composer votre menu-->
-                        <div class="btn_fonctionnement">
+                        <div class="container-fonct__bloc-bouton__btn">
                             
                             <span>
                                 <i class="fa-list-ul fas position-icone spe-size"></i>
@@ -73,30 +71,31 @@
                             <div>
                                 <p>Composer votre menu</p>
                             </div>
-                            <p class="btn_fonctionnement_numeroetape">2</p>
+                            <p class="container-fonct__bloc-bouton__btn__numeroetape">2</p>
                         
                         </div>
 
                          <!--Degustez au restaurant-->
-                        <div class="btn_fonctionnement">
+                        <div class="container-fonct__bloc-bouton__btn">
                             <span>
                                 <i class="fa-store fas position-icone couleur spe-size"></i>
                             </span>
                             <div>
                                 <p>Degustez au restaurant</p>
                             </div>
-                            <p class="btn_fonctionnement_numeroetape">3</p>
+                            <p class="container-fonct__bloc-bouton__btn__numeroetape">3</p>
                         </div>
                     </div>  
                 </section>
         <!--Bloc photo restaurant-->
+       
+        
         <section>
 
-            <h2 class="titre--h2-titre--couleur">Restaurants</h2>
-
+            <h2 class="titre-fonctionnement titre-fonctionnement--partie-restaurant">Restaurants</h2>
             <!--les cartes de restaurant-->
             <div class="conteneur-Resto">
-
+                
                 <div class="conteneur-Resto__cards">
                         <img class="conteneur-Resto__cards__photo" src="Maquettes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo du restaurant">
                         <div class="conteneur-Resto__cards__text">

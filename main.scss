@@ -1,138 +1,113 @@
 @import "./utils/variables";
 @import "./utils/fonctions";
 @import "./utils/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
-@font-face {
-    font-family: 'shrikhandregular';
-    src: url('fonts/shrikhand-regular-webfont.woff2') format('woff2'),
-         url('fonts/shrikhand-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'roboto_condensedregular';
-    src: url('fonts/robotocondensed-regular-webfont.woff2') format('woff2'),
-         url('fonts/robotocondensed-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/*body{
-    font-family:'roboto_condensedregular';
-    font-size: 1.6rem;
-}
-*/
-.header{
-    font-family:'shrikhandregular';
-    color:rgb(238, 98, 98);
-    font-size: 6rem;
-    font-style: italic;
-    color: black;
+.header__titreprincipal{
+    font-family:"shrikhand";
+    color:black;
+    font-size: 4.5rem;
     font-weight: bolder;
     text-align: center;
+    margin-bottom:1.5rem;
 }
-/*h2{
-    font-size: 4.1rem;
-    font-weight: bold;
-    font-family: 'shrikhandregular';
-}
-*/
-.annonce{
-    font-weight: bold;
-    font-family: 'shrikhandregular';
-    &__h2{
-        font-size: 4.1rem;
-        font-family: "roboto_condensedregular";
-        }
-    &__commentaire{
-            /*font-size: 3.1rem;*/
-            color: grey;
-            font-family: "roboto_condensedregular";
-        }   
-    &--h2-titre{
-        font-size: 4.1rem;
-        padding-left:0.6em;
-        &--couleur{
-            background-color:$couleur-fond-gris-localisation;
-            font-size: 4.1rem;
-            padding-left: 0.6em;
-            margin-bottom:0;
-            padding-top:1.8em;
-            padding-bottom: 0.2em;
-        }
-    }
-   
-}
-/*
-.h2-size{
-        padding-left:0.6em;
-        font-weight: bold;
-        font-family: 'shrikhandregular';
-    }
-*/
 
-/*question pourquoi quand je valide ceci je decale mon bouton?
-.text__size{
-    font-size: 3.1rem;
-}
-*/
 .annonce{
     display: flex;
+    flex-direction: column;
     width: 100%;
     box-shadow: Grey;
     background-color: $couleur-fond-gris;
-    flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
-    &--text__size{
-        font-size: 10rem;
-    }
+    font-weight: bold;
+    font-family: "roboto";
+    margin-bottom: 8rem;
 }
-
-.annonce__localisation{
+.annonce__local{
         display:flex;
         flex-direction:row;
-        background-color:$couleur-fond-gris-localisation;
+        background-color:$couleur-fond-gris-local;
         box-shadow:inset 1px 6px rgb(190, 190, 187, 0.3);
         width: 100%;
-
-    }
-.annonce__localisation__icone{
-    width: 40%;
-    padding-top:1.9rem;
-    text-align:right;
-    font-size: 2rem;
+        &__icone{
+            width: 40%;
+            padding-top:1.9rem;
+            text-align:right;
+            font-size: 2.3rem;
+        }
+        &__text{
+            width: 60%;
+            padding-left:1.6rem;
+            text-align:left;
+            font-size: 2.3rem;
+            font-weight: bold;
+        }
 }
 
-.annonce__localisation__text{   
-    width: 60%;
-    padding-left:1.6rem;
-    text-align:left;
-    font-size: 2.1rem;
-    font-weight: bold;
+.annonce__text{
+    font-family: "roboto";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__h2first{
+        padding-top: 4rem;
+        font-size: 3.5rem;
+        font-family: "roboto";
+    }
+    &__h2{
+        font-size: 3.5rem;
+        font-family: "roboto";
+    }
+    &__commentairefirst{
+        padding-top:2.5rem;
+        color:black;
+        font-weight: lighter;
+        font-family: "roboto";
+        font-size: 2.1rem;
+    }
+    &__commentaire{
+        color:black;
+        font-weight: lighter;
+        font-family: "roboto";
+        font-size: 2.1rem;
+    }
 }
 
 .btn{
     color:white;
     padding:2.5rem 4rem;
     border-radius: 10rem;
-    font-size: 3rem;
-    font-weight: 30;
+    font-size: 2.3rem;
+    font-weight: 500;
     background: linear-gradient($couleur-secondaire,$couleur-primaire);
     cursor: pointer;
-    width: 30rem;
+    width: 27rem;
+    margin-top:5rem;
+    margin-bottom:8rem;
     &:hover {
         background-color:pastel($couleur-secondaire);
     }
 }
 
-
 /*Partie Fonctionnement*/
 
-.fonctionnemnt{
+.titre-fonctionnement{
+    font-size:3.5rem;
+    font-family: "roboto";
+    padding-left:2.2rem;
+    &--partie-restaurant{
+        background-color: $couleur-fond-gris;
+        padding-bottom: 0px;
+        padding-top:2em;
+        margin-bottom: 0px;
+    }
+}
+
+.container-fonct{
     position:relative;
     margin-left: 5px;
     margin-right:5px;
@@ -144,38 +119,37 @@
     align-items: center;
     background-color: white;
 }
-
-    .btn_fonctionnement_numeroetape{
-        position:absolute;
-        left:-35px;
-        border-radius:50%;
-        background-color: $couleur-primaire;
-        padding:10px 20px;
-        color:white;
-        font-size: 0.8em;
-    }
-
-    .btn_fonctionnement{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position:relative;
-        color:black;
-        padding:0.5em 2.2em 0.5em 0em;
-        border-radius: 50px;
-        font-size: 2.7rem;
-        font-weight: bold;
-        background:$couleur-fond-gris-localisation;
-        cursor: pointer;
-        width: 48rem;
-        margin:0px 20px 60px 0px;
-        box-shadow:0px 8px 14px grey;
+    
+.container-fonct__bloc-bouton__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    color:black;
+    padding:0.5em 2.2em 0.5em 0em;
+    border-radius: 50px;
+    font-size: 2.7rem;
+    font-weight: bold;
+    background:$couleur-fond-gris-local;
+    cursor: pointer;
+    width: 46rem;
+    margin:0px 20px 60px 0px;
+    box-shadow: 0px 5px 30px #ccbbbb;        
         &:hover {
             background-color:lighten($couleur-secondaire, 20%);
-            
-        
         }
+}
+
+.container-fonct__bloc-bouton__btn__numeroetape{
+    position:absolute;
+    left:-35px;
+    border-radius:50%;
+    background-color: $couleur-primaire;
+    padding:10px 18px;
+    color:white;
+    font-size: 0.7em; 
     }
+
 .position-icone{
     margin-right:1.4em;
     font-size: 1.2em;
@@ -184,23 +158,23 @@
     }
     &.couleur{
         color:$couleur-primaire;
-  }
-    
-}
+    } 
+}   
 
 /*partie Restaurant*/
 
 
 .conteneur-Resto{
-    background-color: $couleur-fond-gris-localisation;
+    background-color: $couleur-fond-gris-local;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 150px;
     margin-bottom: 0px;
+}
 
-    .conteneur-Resto__cards{
+.conteneur-Resto__cards{
         margin-top:2em;
         width:90%;
         display: flex;
@@ -210,24 +184,17 @@
         height:650px;
         background-color: white;
         align-content: center;
-    
-       
+}
 
-        .conteneur-Resto__cards__photo{
+.conteneur-Resto__cards__photo{
          width:100%;
          height:70%;
          background-size:cover;
          border-radius: 20px 20px 0 0 ;
-        } 
+} 
 
-        .spe-note-enchante{
+.spe-note-enchante{
             position: absolute;
-            
-        }
-
-    
-            
-    }
 }
 
 .conteneur-Resto__cards__text{
@@ -242,36 +209,37 @@
     right:40px;
     top:60px;
     font-size: 4em;
-       } 
+ } 
 
 .btn-nouveau{
     position: absolute;
-    right:10px;
+    right:30px;
+    top:-460px;
     font-size:2.2em;
-    padding-top:8px;
-    padding-bottom:8px;
-    padding-right:8px;
-    padding-left:8px;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-right:28px;
+    padding-left:28px;
     text-align: center;
     background-color:$couleur-tertiare;
     color:$couleur-text-nouveau;
     font-weight: bold;
-    font-family:"roboto_condensedregular";
-
+    font-family:"roboto";
 }
        
 .conteneur-Resto__cards__text__niv1{
-    font-size:3em;
-    font-family: "roboto_condensedregular";
-    font-weight: bold;
+    font-size:2.5em;
+    font-family: "roboto";
+    font-weight: 900;
     color:black;
     margin-bottom: 0px;
     padding-left:1em;
 }
 
 .conteneur-Resto__cards__text__niv2{
-    font-family: "roboto_condensedregular";
-    font-size:3em;
+    font-family: "roboto";
+    font-size:2.4em;
+    padding-top:0.3em;
     padding-left:1em;
     margin-top:0px;
 }
@@ -295,12 +263,13 @@
         font-weight:bolder;
     }
 }
+
 .footer__bloc{
     display: flex;
     flex-direction:row;
     align-items: center;
- 
 }
+
 .footer__bloc__icone{
     width: 6%;
     font-size: 2em;
@@ -309,15 +278,15 @@
     padding-bottom: 0px;
     padding-top: 0px;
 }
+
 .footer__bloc__text{
     margin-bottom: 0px;
     margin-top:0px;
 }
 
-    .footer--texte{
-        padding-bottom:0px;
+.footer--texte{
+    padding-bottom:0px;
         padding-top: 0px;
         margin-bottom: 0.5em;
         margin-top:0px;
-    }
-   
+}
