@@ -56,7 +56,7 @@
     flex-direction: column;
 
     &__h2first{
-        padding-top: 4rem;
+        padding-top: 6rem;
         font-size: 3.5rem;
         font-family:$font2;
     }
@@ -69,13 +69,13 @@
         color:black;
         font-weight: lighter;
         font-family:$font2;
-        font-size: 2.1rem;
+        font-size: 2.5em;
     }
     &__commentaire{
         color:black;
         font-weight: lighter;
         font-family:$font2;
-        font-size: 2.1rem;
+        font-size: 2.5em;
     }
     &__btn{
         margin-top:3.3em;
@@ -93,9 +93,9 @@
     &:hover {
         background-color:pastel($couleur-secondaire);
     }
-    &--explorernosrestaurants{
-        font-size: 10em;
-        min-width: 27em;
+    &--explorernosrestaurant{
+        font-size: 2em;
+        min-width: 9em;
     }
     &--commande{
         margin-top:2.5em;
@@ -109,7 +109,7 @@
 /*Partie Fonctionnement*/
 
 .titre-fonctionnement{
-    font-size:3.5rem;
+    font-size:3.9rem;
     font-family:$font2;
     padding-left:2.2rem;
     &--partie-restaurant{
