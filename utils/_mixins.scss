@@ -1,0 +1,34 @@
+@mixin header__titreprincipal{
+    font-family:"shrikhand";
+    color:black;
+    font-size: 4.5rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom:1.5rem;
+    position: relative;
+
+}
+
+@mixin footer__bloc {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+@mixin footer__bloc__icone{
+    width: 6%;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    margin-top:0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+@mixin footer__bloc__text{
+    margin-bottom: 0px;
+    margin-top:0px;
+}
+@mixin footer--texte {
+    padding-bottom:0px;
+    padding-top: 0px;
+    margin-bottom: 0.5em;
+    margin-top:0px;
+}
