@@ -1,413 +1,443 @@
-@import "./utils/variables";
-@import "./utils/fonctions";
-@import "./utils/mixins";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
-.header__titreprincipal{
-    @include header__titreprincipal;
-    }
+    @import "./utils/variables";
+    @import "./utils/fonctions";
+    @import "./utils/mixins";
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
-.btn-retour{
-    position: absolute;
-    font-size:3em;
-    top:75px;
-    left:100px;
-}
-.annonce{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    box-shadow: Grey;
-    background-color: $couleur-fond-gris;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-family:$font2;
-    margin-bottom: 8em;
-    padding-bottom: 8em;
-}
-.annonce__local{
-        display:flex;
-        flex-direction:row;
-        background-color:$couleur-fond-gris-local;
-        box-shadow:inset 1px 6px rgb(190, 190, 187, 0.3);
-        width: 100%;
-        &__icone{
-            width: 40%;
-            padding-top:1.9rem;
-            text-align:right;
-            font-size: 2.3rem;
-        }
-        &__text{
-            width: 60%;
-            padding-left:1.6rem;
-            text-align:left;
-            font-size: 2.3rem;
-            font-weight: bold;
-        }
-}
+//format telephone
+@media screen and (max-width: 767px){
+    body{
+        .header__titreprincipal{
+            @include header__titreprincipal;
+            }
 
-.annonce__text{
-    font-family:$font2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-
-    &__h2first{
-        padding-top: 6rem;
-        font-size: 3.5rem;
-        font-family:$font2;
-    }
-    &__h2{
-        font-size: 3.5rem;
-        font-family:$font2;
-    }
-    &__commentairefirst{
-        padding-top:2.5rem;
-        color:black;
-        font-weight: lighter;
-        font-family:$font2;
-        font-size: 1.6em;
-        width: 100%;
-    }
-    &__commentaire{
-        color:black;
-        font-weight: lighter;
-        font-family:$font2;
-        font-size: 1.6em;
-        width: 100%;
-    }
-    &__btn{
-        margin-top:3.3em;
-    }
-}
-
-.btn{
-    color:white;
-    background: linear-gradient($couleur-secondaire,$couleur-primaire);
-    cursor: pointer;
-    border-radius: 10rem;
-    padding:2.5rem 4rem;
-    font-family: $font2;
-    font-weight: 500;
-    &:hover {
-        background-color:pastel($couleur-secondaire);
-    }
-    &--explorernosrestaurant{
-        font-size: 1.1em;
-        min-width: 14em;
-    }
-    &--commande{
-        margin-top:2.5em;
-        text-align: center;
-        margin-top:0.3em;
-        min-width:9em;
-        font-size:2.8em;
-    }
-}
-
-/*Partie Fonctionnement*/
-
-.titre-fonctionnement{
-    font-size:3.9rem;
-    font-family:$font2;
-    padding-left:2.2rem;
-    &--partie-restaurant{
-        background-color: $couleur-fond-gris;
-        padding-bottom: 0px;
-        padding-top:2em;
-        margin-bottom: 0px;
-    }
-}
-
-.container-fonct{
-    position:relative;
-    margin-left: 5px;
-    margin-right:5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-}
-    
-.container-fonct__bloc-bouton__btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position:relative;
-    color:black;
-    padding:0.5em 2.2em 0.5em 0em;
-    border-radius: 50px;
-    font-size: 2.7rem;
-    font-weight: bold;
-    background:$couleur-fond-gris-local;
-    cursor: pointer;
-    width: 46rem;
-    margin:0px 20px 60px 0px;
-    box-shadow: 0px 5px 30px #ccbbbb;        
-        &:hover {
-            background-color:lighten($couleur-secondaire, 20%);
-        }
-}
-
-.container-fonct__bloc-bouton__btn__numeroetape{
-    position:absolute;
-    left:-35px;
-    border-radius:50%;
-    background-color: $couleur-primaire;
-    padding:10px 18px;
-    color:white;
-    font-size: 0.7em; 
-    }
-
-.position-icone{
-    margin-right:1.4em;
-    font-size: 1.2em;
-    &.spe-size{
-        font-size: 1em; 
-    }
-    &.couleur{
-        color:$couleur-primaire;
-    } 
-}   
-
-/*partie Restaurant*/
-
-
-.conteneur-Resto{
-    background-color: $couleur-fond-gris;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 150px;
-    margin-bottom: 0px;
-}
-
-.conteneur-Resto__cards{
-        margin-top:2em;
-        width:90%;
-        display: flex;
-        position:relative;
-        flex-direction: column;
-        border-radius: 25px;
-        // height:650px;
-        background-color: white;
-        align-content: center;
-}
-
-.conteneur-Resto__cards__photo{
-         width:100%;
-         max-height:460px;
-         background-size:cover;
-         border-radius: 20px 20px 0 0 ;
-} 
-
-.spe-note-enchante{
+        .btn-retour{
             position: absolute;
-}
-
-.conteneur-Resto__cards__text{
-        display: flex;
-        position: relative;
-        flex-direction: row;
-        align-items: center;
-}
-
-.conteneur-Resto__cards__text__like{
-    position: absolute;
-    right:40px;
-    top:60px;
-    font-size: 4em;
- } 
-
-.btn-nouveau{
-    position: absolute;
-    right:30px;
-    top:-460px;
-    font-size:2.2em;
-    padding-top:15px;
-    padding-bottom:15px;
-    padding-right:28px;
-    padding-left:28px;
-    text-align: center;
-    background-color:$couleur-tertiare;
-    color:$couleur-text-nouveau;
-    font-weight: bold;
-    font-family:$font2;
-}
-       
-.conteneur-Resto__cards__text__niv1{
-    font-size:2.5em;
-    font-family:$font2;
-    font-weight: 900;
-    color:black;
-    margin-bottom: 0px;
-    padding-left:1em;
-}
-
-.conteneur-Resto__cards__text__niv2{
-    font-family:$font2;
-    font-size:2.4em;
-    padding-top:0.3em;
-    padding-left:1em;
-    margin-top:0px;
-}
-
-.footer{
-    background-color: black;
-    height:40em;
-    color: white;
-    padding-left: 2em;
-    &--titre{
-        margin-top:0px;
-        padding-top: 1em;
-        font-family:$font1;
-        font-size: 3.2em;
-        font-style: italic;
-        font-weight:bolder;
-    }
-    &--texte{
-        font-family:$font2;
-        font-size: 2.4em;
-        font-weight:bolder;
-    }
-}
-
-.footer__bloc{
-    @include footer__bloc;
-}
-
-.footer__bloc__icone{
-    @include footer__bloc__icone;
-}
-
-.footer__bloc__text{
-    @include footer__bloc__text;
-}
-
-.footer--texte{
-    @include footer--texte;
-}
-
-/*partie page menu - header et footer commun*/
-
-.couleur-fond-body{
-    background-color:$couleur-fond-gris;
-}
-.header{
-    position:relative;
-}
-.header__photo{
-    background-size: cover;
-    height:600px;
-    width: 100%;
-    margin-right:0px;
-    margin-left:0px;
-    padding-left: 0px;
-    padding-right:0px;
-   
-}
-
-.menu{
-    position:relative;
-    top:-120px;
-    background-color:$couleur-fond-gris;
-    border-radius: 80px 80px 0 0;
-    width: 100%;
-    margin-left:0px;
-    margin-right:0px;
-}
-
-.menu__titre{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content:space-between;
-    width: 100%;
-    margin-bottom:3.5em;
-    &__intitule{
-        width: 80%;
-        padding-top:1.4em;
-        font-size: 4.2em;
-        font-family:"Shrikhand";
-        font-weight:bolder; 
-        padding-left:0.9em;
-    }
-    &__coeur{
-        padding-top:1.5em;
-        width: 15%;
-        font-size:3.5em;
-    }
-}
-
-.menu__ctn{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-left:2em;
-    margin-right:2em;
-    Margin-bottom:6em;
-   
-        &__titre{
-        font-size: 2.4em;
-        font-family:$font2;
-        padding-bottom: 0.3em;
-    }
-    &__bordure{
-        border-top:solid 7px $couleur-tertiare;
-        width: 10%;
-    }
-    &__bloc-cards{
-        display: flex;
-        justify-content:space-evenly;
-        flex-direction: column;
-        &__card{
-            background-color: rgb(250, 250, 250);
-            border-radius:20px;
-            position:relative;
-            height: 175px;
-            margin-top:30px;
-            &__text{
-                font-family:$font2;
-                padding-left:2em;
-                margin:0px;
-                &__niv1{
-                    margin:0px;
-                    padding-top:1em;
-                    font-size:2.6em;
+            font-size:3em;
+            top:75px;
+            left:100px;
+        }
+        .annonce{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            box-shadow: Grey;
+            background-color: $couleur-fond-gris;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-family:$font2;
+            margin-bottom: 8em;
+            padding-bottom: 8em;
+        }
+        .annonce__local{
+                display:flex;
+                flex-direction:row;
+                background-color:$couleur-fond-gris-local;
+                box-shadow:inset 1px 6px rgb(190, 190, 187, 0.3);
+                width: 100%;
+                &__icone{
+                    width: 40%;
+                    padding-top:1.9rem;
+                    text-align:right;
+                    font-size: 2.3rem;
+                }
+                &__text{
+                    width: 60%;
+                    padding-left:1.6rem;
+                    text-align:left;
+                    font-size: 2.3rem;
                     font-weight: bold;
-                    padding-bottom:0.3em;
-                     }
-                &__niv2{
-                    margin:0px;
-                    font-size:2.3em;
-                    padding-bottom:1em;
-                    }
+                }
+        }
+
+        .annonce__text{
+            font-family:$font2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+
+            &__h2first{
+                padding-top: 6rem;
+                font-size: 3.5rem;
+                font-family:$font2;
             }
-            &__prix{
-                position: absolute;
-                font-family: $font2;
-                font-size: 2.3em;
-                font-weight: bold;
-                top:75px;
-                right:50px;
+            &__h2{
+                font-size: 3.5rem;
+                font-family:$font2;
+            }
+            &__commentairefirst{
+                padding-top:2.5rem;
+                color:black;
+                font-weight: lighter;
+                font-family:$font2;
+                font-size: 1.6em;
+                width: 100%;
+            }
+            &__commentaire{
+                color:black;
+                font-weight: lighter;
+                font-family:$font2;
+                font-size: 1.6em;
+                width: 100%;
+            }
+            &__btn{
+                margin-top:3.3em;
+            }
+        }
+
+        .btn{
+            color:white;
+            background: linear-gradient($couleur-secondaire,$couleur-primaire);
+            cursor: pointer;
+            border-radius: 10rem;
+            padding:2.5rem 4rem;
+            font-family: $font2;
+            font-weight: 500;
+            &:hover {
+                background-color:pastel($couleur-secondaire);
+            }
+            &--explorernosrestaurant{
+                font-size: 1.1em;
+                min-width: 14em;
+            }
+            &--commande{
+                margin-top:2.5em;
+                text-align: center;
+                margin-top:0.3em;
+                min-width:9em;
+                font-size:2.8em;
+            }
+        }
+
+        /*Partie Fonctionnement*/
+
+        .titre-fonctionnement{
+            font-size:3.9rem;
+            font-family:$font2;
+            padding-left:2.2rem;
+            &--partie-restaurant{
+                background-color: $couleur-fond-gris;
+                padding-bottom: 0px;
+                padding-top:2em;
+                margin-bottom: 0px;
+            }
+        }
+
+        .container-fonct{
+            position:relative;
+            margin-left: 5px;
+            margin-right:5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+        }
+            
+        .container-fonct__bloc-bouton__btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position:relative;
+            color:black;
+            padding:0.5em 2.2em 0.5em 0em;
+            border-radius: 50px;
+            font-size: 2.7rem;
+            font-weight: bold;
+            background:$couleur-fond-gris-local;
+            cursor: pointer;
+            width: 46rem;
+            margin:0px 20px 60px 0px;
+            box-shadow: 0px 5px 30px #ccbbbb;        
+                &:hover {
+                    background-color:lighten($couleur-secondaire, 20%);
+                }
+        }
+
+        .container-fonct__bloc-bouton__btn__numeroetape{
+            position:absolute;
+            left:-35px;
+            border-radius:50%;
+            background-color: $couleur-primaire;
+            padding:10px 18px;
+            color:white;
+            font-size: 0.7em; 
+            }
+
+        .position-icone{
+            margin-right:1.4em;
+            font-size: 1.2em;
+            &.spe-size{
+                font-size: 1em; 
+            }
+            &.couleur{
+                color:$couleur-primaire;
+            } 
+        }   
+
+        /*partie Restaurant*/
+
+
+        .conteneur-Resto{
+            background-color: $couleur-fond-gris;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 150px;
+            margin-bottom: 0px;
+        }
+
+        .conteneur-Resto__cards{
+                margin-top:2em;
+                width:90%;
+                display: flex;
+                position:relative;
+                flex-direction: column;
+                border-radius: 25px;
+                // height:650px;
+                background-color: white;
+                align-content: center;
+        }
+
+        .conteneur-Resto__cards__photo{
+                width:100%;
+                max-height:460px;
+                background-size:cover;
+                border-radius: 20px 20px 0 0 ;
+        } 
+
+        .spe-note-enchante{
+                    position: absolute;
+        }
+
+        .conteneur-Resto__cards__text{
+                display: flex;
+                position: relative;
+                flex-direction: row;
+                align-items: center;
+        }
+
+        .conteneur-Resto__cards__text__like{
+            position: absolute;
+            right:40px;
+            top:60px;
+            font-size: 4em;
+        } 
+
+        .btn-nouveau{
+            position: absolute;
+            right:30px;
+            top:-460px;
+            font-size:2.2em;
+            padding-top:15px;
+            padding-bottom:15px;
+            padding-right:28px;
+            padding-left:28px;
+            text-align: center;
+            background-color:$couleur-tertiare;
+            color:$couleur-text-nouveau;
+            font-weight: bold;
+            font-family:$font2;
+        }
+            
+        .conteneur-Resto__cards__text__niv1{
+            font-size:2.5em;
+            font-family:$font2;
+            font-weight: 900;
+            color:black;
+            margin-bottom: 0px;
+            padding-left:1em;
+        }
+
+        .conteneur-Resto__cards__text__niv2{
+            font-family:$font2;
+            font-size:2.4em;
+            padding-top:0.3em;
+            padding-left:1em;
+            margin-top:0px;
+        }
+
+        .footer{
+            background-color: black;
+            height:40em;
+            color: white;
+            padding-left: 2em;
+            &--titre{
+                margin-top:0px;
+                padding-top: 1em;
+                font-family:$font1;
+                font-size: 3.2em;
+                font-style: italic;
+                font-weight:bolder;
+            }
+            &--texte{
+                font-family:$font2;
+                font-size: 2.4em;
+                font-weight:bolder;
+            }
+        }
+
+        .footer__bloc{
+            @include footer__bloc;
+        }
+
+        .footer__bloc__icone{
+            @include footer__bloc__icone;
+        }
+
+        .footer__bloc__text{
+            @include footer__bloc__text;
+        }
+
+        .footer--texte{
+            @include footer--texte;
+        }
+
+        /*partie page menu - header et footer commun*/
+
+        .couleur-fond-body{
+            background-color:$couleur-fond-gris;
+        }
+        .header{
+            position:relative;
+        }
+        .header__photo{
+            background-size: cover;
+            height:600px;
+            width: 100%;
+            margin-right:0px;
+            margin-left:0px;
+            padding-left: 0px;
+            padding-right:0px;
+        
+        }
+
+        .menu{
+            position:relative;
+            top:-120px;
+            background-color:$couleur-fond-gris;
+            border-radius: 80px 80px 0 0;
+            width: 100%;
+            margin-left:0px;
+            margin-right:0px;
+        }
+
+        .menu__titre{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            justify-content:space-between;
+            width: 100%;
+            margin-bottom:3.5em;
+            &__intitule{
+                width: 80%;
+                padding-top:1.4em;
+                font-size: 4.2em;
+                font-family:"Shrikhand";
+                font-weight:bolder; 
+                padding-left:0.9em;
+            }
+            &__coeur{
+                padding-top:1.5em;
+                width: 15%;
+                font-size:3.5em;
+            }
+        }
+
+        .menu__ctn{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-left:2em;
+            margin-right:2em;
+            Margin-bottom:6em;
+        
+                &__titre{
+                font-size: 2.4em;
+                font-family:$font2;
+                padding-bottom: 0.3em;
+            }
+            &__bordure{
+                border-top:solid 7px $couleur-tertiare;
+                width: 10%;
+            }
+            &__bloc-cards{
+                display: flex;
+                justify-content:space-evenly;
+                flex-direction: column;
+                &__card{
+                    cursor: pointer;
+                    background-color: rgb(250, 250, 250);
+                    border-radius:20px;
+                    position:relative;
+                    height: 175px;
+                    margin-top:30px;
+                    &:hover{
+                        background-color: red;
+                    }
+                    &__text{
+                        font-family:$font2;
+                        padding-left:2em;
+                        margin:0px;
+                        &__niv1{
+                            margin:0px;
+                            padding-top:1em;
+                            font-size:2.6em;
+                            font-weight: bold;
+                            padding-bottom:0.3em;
+                            }
+                        &__niv2{
+                            margin:0px;
+                            font-size:2.3em;
+                            padding-bottom:1em;
+                            }
+                    }
+                    &__prix{
+                        position: absolute;
+                        font-family: $font2;
+                        font-size: 2.3em;
+                        font-weight: bold;
+                        top:75px;
+                        right:50px;
+                    }
+                }
+            }
+
+        }
+
+        .ctn__btn-commande{
+            margin-bottom:12em;
+            display: flex;
+            justify-content: center;
+            margin-bottom:6em;
+        }
+
+        .btn-ok{ 
+            position:flex;
+            height: 100%;
+            width: 2em;
+            right:0px;
+            border-radius: 0px 20px 20px 0;
+            transition: all 800ms;
+            background-color: $couleur-tertiare;
+            
+            &:hover{
+                transform-origin:100%;
+                transform: scaleX(1);
+            
+                
             }
         }
     }
-
+    
 }
+//Format screen pour destock
 
-.ctn__btn-commande{
-    margin-bottom:12em;
-    display: flex;
-    justify-content: center;
-    margin-bottom:6em;
-}

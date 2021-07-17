@@ -32,3 +32,21 @@
     margin-bottom: 0.5em;
     margin-top:0px;
 }
+
+@mixin destock{
+    @media only screen and (min-width: 1024px){
+        @content;
+    }
+}
+
+@mixin tablette{
+    @media only screen and (min-width: 768px) and (max-width: 1023px){
+        @content;
+    }
+}
+
+@mixin phone{
+    @media only screen and (max-width: 767px){
+        @content;
+    }
+}
