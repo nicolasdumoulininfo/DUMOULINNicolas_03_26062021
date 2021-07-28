@@ -2,9 +2,10 @@
     @import "./utils/variables";
     @import "./utils/fonctions";
     @import "./utils/mixins";
+    @import "./utils/animation";
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
-//format telephone
+//format telephone============================================================
 
 
     
@@ -114,7 +115,14 @@
             }
         }
 
-        /*Partie Fonctionnement*/
+//Partie Fonctionnement===================================================
+    .sidebar{
+        @include destock{
+            margin: 10px 10px 10px 40px;
+            //pour resoudre le rognage de la bulle1 qui sort sur la gauche du bouton
+        }
+    }
+
 
         .titre-fonctionnement{
             font-size:3.9rem;
@@ -183,9 +191,13 @@
             } 
         }   
 
-        /*partie Restaurant*/
-
-
+        //partie Restaurant=======================================================
+    .body{
+        @include destock{
+            padding-bottom:10em;
+            background-color: $couleur-fond-gris;
+        }
+    }
         .conteneur-Resto{
             display: flex;
             background-color: $couleur-fond-gris;
@@ -256,7 +268,22 @@
                     }
                 }
         }
-
+        .anim_heart{
+            &:hover {
+                & .redheart {
+                    opacity: 1;
+                }
+                & .normalheart{
+                    opacity:0;
+                    transition: opacity 2s;
+                }
+            }
+            .redheart {
+                color:$couleur-primaire;
+                opacity:0;
+                transition: opacity 3s;
+            }
+        }
         .spe-note-enchante{
                     position: absolute;
         }
@@ -271,7 +298,7 @@
             padding-right:28px;
             padding-left:28px;
             text-align: center;
-            background-color:$couleur-tertiare;
+            background-color:$couleur-tertiaire;
             color:$couleur-text-nouveau;
             font-weight: bold;
             font-family:$font2;
@@ -282,13 +309,6 @@
             height:40em;
             color: white;
             padding-left: 2em;
-            @include destock{
-                width: 250%;
-                display:grid;
-                grid-template-columns:1fr 1fr 1fr 1fr ;
-                grid-template-rows: 1fr 1fr;
-                height: 400px;
-            }
             &--titre{
                 margin-top:0px;
                 padding-top: 1em;
@@ -330,30 +350,56 @@
         .footer--texte{
             @include footer--texte;
         }
-
-        /*partie page menu - header et footer commun*/
+        
+//partie page menu - header et footer commun==============================
 
         .couleur-fond-body{
             background-color:$couleur-fond-gris;
         }
         .header{
             position:relative;
+            @include destock{
+                //display: grid;
+                //grid-template-columns: 1fr 1fr 1fr;
+                //grid-template-rows: 1fr 1fr 1fr;
+            }
+            &__titreprincipal{
+                @include destock{
+                    //grid-column-start: 2;
+                    //grid-column-end:3;
+                }
+            }
         }
-        .header__photo{
-            background-size: cover;
-            height:600px;
+        /*.ctn-photo{
             width: 100%;
+            margin:0;
             margin-right:0px;
             margin-left:0px;
             padding-left: 0px;
             padding-right:0px;
-                
-            @include destock{
-                height:1100px;
-                width: 250%;
+        }*/
+        #header-photo{
+            @include phone{
+                background-size: cover;
+                margin-right:0px;
+                margin-left:0px;
+                padding-left: 0px;
+                padding-right:0px;
+                height:600px;
+                width: 100%;
             }
-        }    
-        
+            @include destock{
+                width: 100%;
+                background-size: cover;
+                margin-right:0px;
+                margin-left:0px;
+                padding-left: 0px;
+                padding-right:0px;
+                //grid-row-start: 2;
+                //grid-row-end: 3;
+            }
+        } 
+    
         .menu{
             position:relative;
             top:-120px;
@@ -363,51 +409,69 @@
             margin-left:0px;
             margin-right:0px;
             @include destock{
-                display:grid;
-                grid-template-columns: 80% 80% 80%;
-                grid-template-rows:10% 80% 20%;
+                //display:grid;
+                //grid-template-columns: 80% 80% 80%;
+                //grid-template-rows:10% 80% 20%;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                
             }
-        }
-
-        .menu__titre{
-            display:flex;
-            flex-direction: row;
-            align-items: center;
-            align-content: center;
-            justify-content:space-between;
-            width: 100%;
-            margin-bottom:3.5em;
-            @include destock{
-                grid-column: 1 / span 3;
-            }
-            &__intitule{
-                width: 80%;
-                padding-top:1.4em;
-                font-size: 4.2em;
-                font-family:"Shrikhand";
-                font-weight:bolder; 
-                padding-left:0.9em;
+            &__titre{
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                align-content: center;
+                justify-content:space-between;
+                width: 100%;
+                margin-bottom:3.5em;
                 @include destock{
-                    grid-column: 1 / span 3;
-                    
+                    //grid-column: 1 / span 3;
+                }
+                &__intitule{
+                    width: 80%;
+                    padding-top:1.4em;
+                    font-size: 4.2em;
+                    font-family:"Shrikhand";
+                    font-weight:bolder; 
+                    padding-left:0.9em;
+                    @include destock{
+                        //grid-column: 1 / span 3;
+                        
+                    }
+                }
+                &__coeur{
+                    padding-top:1.5em;
+                    width: 15%;
+                    font-size:3.5em;
+                    @include destock{
+                        //grid-column-start:2;
+                        //grid-row-start:1;
+                        //grid-column-end:span 2;
+                        //justify-self: left;
+                    }
                 }
             }
-            &__coeur{
-                padding-top:1.5em;
-                width: 15%;
-                font-size:3.5em;
-            }
         }
 
-        .menu__ctn{
+        
+        .menu__blockctns{
+        @include destock{
+            display: flex;
+            flex-direction:row;
+            width: 100%;
+        }
+        &__ctn{
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             margin-left:2em;
             margin-right:2em;
-            Margin-bottom:6em;
-            @include destock{
-
+            margin-bottom:6em;
+            @include destock{  
+                min-width:100%;
+                margin-top:50px;
             }
             &__titre{
                 font-size: 2.4em;
@@ -415,8 +479,11 @@
                 padding-bottom: 0.3em;
             }
             &__bordure{
-                border-top:solid 7px $couleur-tertiare;
+                border-top:solid 7px $couleur-tertiaire;
                 width: 10%;
+                @include destock{
+                    margin-top:-5px;
+                }
             }
             &__bloc-cards{
                 display: flex;
@@ -461,6 +528,7 @@
             }
 
         }
+    }
 
         .ctn__btn-commande{
             @include phone{
@@ -470,9 +538,11 @@
             margin-bottom:6em;
             }
             @include destock{
-                grid-column: 1 / span 3;
-                width: 30%;
-                justify-self: center;
+               
+                position: relative;
+                top:-350px;
+                left:-200%;
+                //grid-column: 1 / span 3;
             }
         }
 
@@ -483,7 +553,7 @@
             right:0px;
             border-radius: 0px 20px 20px 0;
             transition: all 800ms;
-            background-color: $couleur-tertiare;
+            background-color: $couleur-tertiaire;
             
             &:hover{
                 transform-origin:100%;
@@ -493,7 +563,7 @@
             }
         }
     
-//Format screen pour destock
+//Format screen pour destock====================================================
 
 .site{
     @include destock{
@@ -515,9 +585,9 @@
         }
         &__sidebar{
             grid-area: sidebar;
-            grid-column-start: 1;
+            grid-column-start: 2;
             grid-column-end: span 4;
-            grid-row-start: 2;
+            grid-row-start: 1;
             grid-row-end: 4;
         
         }
@@ -595,3 +665,62 @@
         align-content: center;
     }
 }
+//essai animation=================================================
+.conteneur-boule{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 25%;
+}
+.imglogo{
+        position: relative;
+        left:60px;
+        opacity:0;
+        animation:anim-logo;
+        animation-duration: 8s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+
+
+.ble{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding:15px;
+    margin:15px;
+    position:relative;
+    z-index: 10;
+    
+    &--boule1{
+        background-color:$couleur-primaire;
+        animation: slide-up 1100ms linear 1s 10 normal backwards;
+    }
+    &--boule2{
+        background-color:$couleur-secondaire;
+        animation: slide-up 1100ms linear 1.2s 10 normal backwards;
+    }
+    &--boule3{
+        background-color:$couleur-tertiaire;
+        animation: slide-up 1100ms linear 1.5s 10 normal backwards;
+        
+    }
+
+}
+
+/*.fa-utensils{
+    font-size: 2.8em;
+    padding-left: 5px;
+    font-weight:bold;
+    opacity: 0.8;
+    animation: anim-ronde 13000ms;
+    &--couleur-primaire{
+        color:$couleur-primaire;
+    }
+    &--couleur-secondaire{
+        color:$couleur-secondaire;
+    }
+    &--couleur-tertiaire{
+        color:$couleur-tertiaire;
+    }
+}*/

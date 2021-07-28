@@ -1,3 +1,8 @@
+//Les mixines======================================
+
+
+//en tete==========================================
+
 @mixin header__titreprincipal{
     font-family:"shrikhand";
     color:black;
@@ -8,8 +13,10 @@
     position: relative;
 
 }
+//Pied de page=====================================
 
 @mixin footer__bloc {
+    width:100%;
     display: flex;
     flex-direction:row;
     align-items: center;
@@ -31,7 +38,10 @@
     padding-top: 0px;
     margin-bottom: 0.5em;
     margin-top:0px;
+    text-decoration: none;
+    color:whitesmoke;
 }
+//Media queries=======================================
 
 @mixin destock{
     @media only screen and (min-width: 1024px){
