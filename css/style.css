@@ -274,6 +274,10 @@
     margin: 0px 10px 0px 10px;
     height: 100%;
   }
+  .conteneur-Resto__cards:hover {
+    transition: transform 330ms ease-in-out;
+    transform: scale(1.02);
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .conteneur-Resto {
@@ -431,32 +435,49 @@
   background-color: whitesmoke;
 }
 
+@media only screen and (min-width: 1024px) {
+  .resto {
+    width: 100%;
+  }
+  .resto .ctn-photo {
+    width: 100%;
+  }
+}
+
 .header {
   position: relative;
 }
-/*.ctn-photo{
+@media only screen and (min-width: 1024px) {
+  .header {
     width: 100%;
-    margin:0;
-    margin-right:0px;
-    margin-left:0px;
-    padding-left: 0px;
-    padding-right:0px;
-}*/
+  }
+}
+.ctn-photo {
+  width: 100%;
+  margin: 0;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#header-photo {
+  width: 100%;
+  background: no-repeat;
+  background-size: cover;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
 @media only screen and (max-width: 767px) {
   #header-photo {
-    background-size: cover;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
     height: 600px;
-    width: 100%;
   }
 }
 @media only screen and (min-width: 1024px) {
   #header-photo {
     width: 100%;
-    background-size: cover;
     margin-right: 0px;
     margin-left: 0px;
     padding-left: 0px;
