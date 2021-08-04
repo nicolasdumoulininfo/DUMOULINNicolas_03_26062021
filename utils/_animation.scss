@@ -1,3 +1,29 @@
+//animation coeur============================================================================ 
+
+.anim_heart{
+    &:hover {
+        & .redheart {
+            opacity: 1;
+        }
+        & .normalheart{
+            opacity:0;
+            transition: opacity 2s;
+        }
+    }
+    .redheart {
+        color:$couleur-primaire;
+        opacity:0;
+        transition: opacity 3s;
+    }
+}
+.spe-note-enchante{
+            position: absolute;
+}
+
+
+// Animation chargement page===============================================================
+
+
 
 @keyframes slide-up { 
     0%{
@@ -62,6 +88,7 @@
     }
     
 }
+
 
 
 
