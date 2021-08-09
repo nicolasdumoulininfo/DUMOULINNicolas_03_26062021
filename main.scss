@@ -3,36 +3,17 @@
     @import "./utils/fonctions";
     @import "./utils/mixins";
     @import "./utils/animation";
+    @import "./Composants/carte-restaurant";
+    @import "./Composants/bouton";
+    @import "./composants/headerresto";
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
 //Page index.html partie header======================================================================
 .site{
-    @include destock{
-        
-        /*display:grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 150px 300px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "header"
-        "header"
-        "sidebar"
-        "sidebar"
-        "sidebar"
-        "bodyresto"
-        "bodyresto"
-        "bodyresto"
-        "bodyresto"
-        "footer"  */
-    }
+
     .header{
         width:100%;
-        /*@include destock{
-            grid-area: header;
-            grid-column-start: 1;
-            grid-column-end: span 4;
-            grid-row-start: 1;
-            grid-row-end: 1; 
-        }*/
+
         &__titreprincipal{
             @include header__titreprincipal;
         }
@@ -40,11 +21,6 @@
                 @include destock{
                     margin-bottom: 3em;
                     padding-bottom: 2em;
-                    /*grid-area: header;
-                    grid-column-start: 1;
-                    grid-column-end: span 4;
-                    grid-row-start: 2;
-                    grid-row-end: 4;*/ 
                 }
                 display: flex;
                 flex-direction: column;
@@ -56,26 +32,35 @@
                 align-items: center;
                 font-weight: bold;
                 font-family:$font2;
-                margin-bottom: 8em;
-                padding-bottom: 8em;
+                margin-bottom: 3rem;
+                padding-bottom: 3rem;
                 &__local{
-                    display:flex;
-                    flex-direction:row;
+                    display:grid;
+                    grid-template-areas:
+                     "icone text text";
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr;
                     background-color:$couleur-fond-gris-local;
                     box-shadow:inset 1px 6px rgb(190, 190, 187, 0.3);
                     width: 100%;
                     &__icone{
-                        width: 40%;
-                        padding-top:1.9rem;
-                        text-align:right;
-                        font-size: 2.3rem;
+                        grid-area: icone;
+                        grid-column-start: 1;
+                        grid-column-end: 1;
+                        justify-self: self-end;
+                        align-self: center;
+                        font-size: 1.2rem;
+                        padding-right: 1rem;
                     }
                     &__text{
-                        width: 60%;
-                        padding-left:1.6rem;
-                        text-align:left;
-                        font-size: 2.3rem;
-                        font-weight: bold;
+                        grid-area: text;
+                        grid-column-start: 2;
+                        grid-column-end:2 ;
+                        //width: 60%;
+                        //padding-left:1.5rem;
+                        //text-align:left;
+                        font-size: 1.1rem;
+                        font-weight: lighter;
                     }
                 }
                 &__text{
@@ -87,8 +72,8 @@
                     width: 100%;
         
                     &__h2first{
-                        padding-top: 6rem;
-                        font-size: 3.5rem;
+                        padding-top: 3rem;
+                        font-size: 1.5rem;
                         font-family:$font2;
                         @include destock{
                             padding-top: 3rem;
@@ -96,18 +81,18 @@
                         }
                     }
                     &__h2{
-                        font-size: 3.5rem;
+                        font-size: 1.5rem;
                         font-family:$font2;
                         @include destock{
                             font-size: 2rem
                         }
                     }
                     &__commentairefirst{
-                        padding-top:2.5rem;
+                        padding-top:1.2rem;
                         color:black;
                         font-weight: lighter;
                         font-family:$font2;
-                        font-size: 2.5em;
+                        font-size: 1.2rem;
                         width: 100%;
                         @include destock{
                             font-size: 2rem
@@ -117,30 +102,23 @@
                         color:black;
                         font-weight: lighter;
                         font-family:$font2;
-                        font-size: 2.5em;
+                        font-size: 1.2rem;
                         width: 100%;
                         @include destock{
                             font-size: 2rem
                         }
                     }
                     &__btn{
-                        margin-top:3.3em;
+                        margin-top:2rem;
                     }
                }
        }
     }//header
 
-//Page index.html Partie Fonctionnement===================================================
+    //Page index.html Partie Fonctionnement===================================================
     
     .sidebar{
         @include destock{
-            /*grid-area: sidebar;
-            grid-column-start: 1;
-            grid-column-end: span 4;
-            grid-row-start: 1;
-            grid-row-end: 4;
-            margin: 10px 10px 10px 40px;
-            //pour resoudre le rognage de la bulle1 qui sort sur la gauche du bouton*/
         }
         .titre-fonctionnement{
             @include titre; 
@@ -163,21 +141,8 @@
                     flex-direction:row;
                     justify-content: space-evenly;
                     width:100%;
-                    /*display:grid;
-                    grid-template-columns:1fr 1fr 1fr 1fr;
-                    grid-template-rows: 1fr;
-                    grid-column-start: 2;
-                    grid-column-gap:50px;
-                    justify-content: center;
-                    align-content: center;*/
                 }
                 @include tablette{
-                    /*display:grid;
-                    grid-template-columns:1fr;
-                    grid-template-rows: 1fr 1fr 1fr;
-                    grid-row-gap:50px;
-                    justify-content: center;
-                    align-content: center;*/
                 }
                 &__btn{
                     display: flex;
@@ -185,15 +150,15 @@
                     align-items: center;
                     position:relative;
                     color:black;
-                    padding:0.5em 2.2em 0.5em 0em;
-                    border-radius: 50px;
+                    padding:0.5rem 4rem 0.5rem 2rem;
+                    border-radius: 15px;
                     font-weight: bold;
                     background:$couleur-fond-gris-local;
                     cursor: pointer;
-                    margin:0px 20px 60px 0px;
-                    box-shadow: 0px 5px 30px #ccbbbb;
-                    min-width: 46rem; 
-                    font-size: 2.7rem;
+                    margin: 0rem 0rem 1.5rem 0rem;
+                    box-shadow: 0px 5px 15px #ccbbbb;
+                    min-width: 10rem; 
+                    font-size: 1.2rem;
                         @include destock{
                         font-size: 1.1em;
                         padding:0.5em 2.2em 0.5em 1em;
@@ -206,12 +171,12 @@
                         }
                     &__numeroetape{
                         position:absolute;
-                        left:-35px;
+                        left:-1rem;
                         border-radius:50%;
                         background-color: $couleur-primaire;
-                        padding:10px 18px;
+                        padding:10px 11px;
                         color:white;
-                        font-size: 0.7em; 
+                        font-size: 0.7rem; 
                         @include destock{
                             font-size: 0.8em;
                         }
@@ -236,27 +201,23 @@
 
     }//sidebar
 
-//Page index.html - partie Restaurant=======================================================
+    //Page index.html - partie Restaurant=======================================================
     
     .bodyresto{
         @include destock{
             padding-bottom:3em;
             background-color: $couleur-fond-gris;
-            /*grid-area: bodyresto;
-            grid-column-start: 1;
-            grid-column-end: span 4;
-            grid-row-start: 3;
-            grid-row-end: 4;*/
             display:flex;
             flex-direction: column;
             justify-content: center;
             align-content: center;
+            
         }
         .titre-fonctionnement{
             @include titre;
             &--partie-restaurant{
                 background-color: $couleur-fond-gris;
-                padding-bottom: 0px;
+                padding-bottom: 1rem;
                 padding-top:2em;
                 margin-bottom: 0px;
                 @include destock{
@@ -272,7 +233,7 @@
                 width: 100%;
                 flex-direction: column;
                 align-items: center;
-                padding-bottom: 150px;
+                padding-bottom: 50px;
                 margin-bottom: 0px;
             }
             @include destock{
@@ -294,168 +255,51 @@
                 padding-bottom: 150px;
                 margin-bottom: 0px; 
             }  
-            &__cards{
-                margin-top:2em;
-                width:90%;
-                display: flex;
-                position:relative;
-                flex-direction: column;
-                border-radius: 25px;
-                background-color: white;
-                align-content: center;
-                &__photo{
-                    width:100%;
-                    max-height:460px;
-                    background-size:cover;
-                    border-radius: 20px 20px 0 0 ;
-                }
-                &__text{
-                        display: flex;
-                        position: relative;
-                        flex-direction: row;
-                        align-items: center;
-                    .btn-nouveau{
-                        position: absolute;
-                        right:30px;
-                        top:-460px;
-                        font-size:2.2em;
-                        padding-top:15px;
-                        padding-bottom:15px;
-                        padding-right:28px;
-                        padding-left:28px;
-                        text-align: center;
-                        background-color:$couleur-tertiaire;
-                        color:$couleur-text-nouveau;
-                        font-weight: bold;
-                        font-family:$font2;
-                        @include destock{
-                            position: relative;
-                            font-size:1.1em;
-                            right:30px;
-                            top:-350px;
-                        }
-                    }
-                    &__niv1{
-                        font-size:2.5em;
-                        font-family:$font2;
-                        font-weight: 900;
-                        color:black;
-                        margin-bottom: 0px;
-                        padding-left:1em;
-                        @include destock{
-                            font-size:1.4em;
-                        }
-                    }
-                    &__niv2{
-                        font-family:$font2;
-                        font-size:2.4em;
-                        padding-top:0.3em;
-                        padding-left:1em;
-                        margin-top:0px;
-                        @include destock{
-                            font-size:1.4em;
-                        }
-                    }
-                    &__like{
-                        position: absolute;
-                        right:40px;
-                        top:60px;
-                        font-size: 4em;
-                        @include destock{
-                            font-size:1.4em;
-                        }
-                    }
-                }//
-            }//cards
-        
         }//conteneur-Resto
+
     }//bodyresto
 
-// Footer===================================================================================
+    // Footer===================================================================================
         
     .footer{
-            @include destock{
-                /*grid-area: footer;
-                grid-column-start: 1;
-                grid-column-end: span 4;
-                grid-row-start: 4;
-                grid-row-end: 4;*/  
+        background-color: black;
+        height:13rem;
+        color: white;
+        padding-left: 2rem;
+        @include destock{ 
                 height:auto;
             }
-            background-color: black;
-            height:40em;
-            color: white;
-            padding-left: 2em;
-            &__bloc{
-                @include footer__bloc;
+           
+        &__bloc{
+            @include footer__bloc;
 
-                &__icone{
-                    @include footer__bloc__icone;
+            &__icone{
+                @include footer__bloc__icone;
                 }
-                &__text{
-                    @include footer__bloc__text;
+            &__text{
+                @include footer__bloc__text;
                 }
-            }
+        }//bloc
+
             &--titre{
                 @include footer--titre;
-                @include destock {
-                    font-size:2em;
-                }
             }
+
             &--texte{
                 @include footer--texte;
-                font-size: 2.4em;
-                
-                @include destock{
-                    font-size: 2em;
-                }
             }
-    }
-}
-//Boutons=====================================================================================
-
-  .btn-retour{
-    position: absolute;
-    font-size:3em;
-    top:75px;
-    left:100px;
-}
-
-.btn{
-    color:white;
-    background: linear-gradient($couleur-secondaire,$couleur-primaire);
-    cursor: pointer;
-    border-radius: 10rem;
-    padding:2.5rem 4rem;
-    font-family: $font2;
-    font-weight: 500;
-    &:hover {
-        background: linear-gradient($couleur-secondaire-lighten,$couleur-primaire-lighten);
-    }
-    &--explorernosrestaurant{
-        font-size: 2.7em;
-        min-width: 14em;
-        @include destock{
-            font-size: 1.4em;
-        }
-    }
-    &--commande{
-        margin-top:2.5em;
-        text-align: center;
-        margin-top:0.3em;
-        width:10em;
-        font-size:2.8em;
-        
+            
     }
 }
 
+  
 //Page menu des Restaurants - header et footer commun==============================
 
         .couleur-fond-body{
             background-color:$couleur-fond-gris;
 
             
-            .headerresto {
+            /*.headerresto {
                 .header__titreprincipal{
                     @include header__titreprincipal;
                 }
@@ -496,12 +340,12 @@
                     } 
                 
                 } 
-            }
+            }*/
             .menu{
                 position:relative;
                 top:-120px;
                 background-color:$couleur-fond-gris;
-                border-radius: 80px 80px 0 0;
+                border-radius: 30px 30px 0 0;
                 width: 100%;
                 margin-left:0px;
                 margin-right:0px;
@@ -531,11 +375,11 @@
                     }
                     &__intitule{
                         width: 80%;
-                        padding-top:1.4em;
-                        font-size: 4.2em;
-                        font-family:"Shrikhand";
+                        padding-top:1.4rem;
+                        font-size: 1.5rem;
+                        font-family:$font1;
                         font-weight:bolder; 
-                        padding-left:0.9em;
+                        padding-left:1rem;
                         @include destock{
                             //grid-column: 1 / span 3;
                             
@@ -544,7 +388,7 @@
                     &__coeur{
                         padding-top:1.5em;
                         width: 15%;
-                        font-size:3.5em;
+                        font-size:1.5rem;
                         @include destock{
                             //grid-column-start:2;
                             //grid-row-start:1;
@@ -566,21 +410,21 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: space-evenly;
-                        margin-left:2em;
-                        margin-right:2em;
-                        margin-bottom:6em;
+                        margin-left:1rem;
+                        margin-right:1rem;
+                        margin-bottom:2rem;
                         @include destock{  
                             min-width:100%;
                             margin-top:50px;
                         }
                         &__titre{
-                            font-size: 2.4em;
+                            font-size: 1.2rem;
                             font-family:$font2;
-                            padding-bottom: 0.3em;
+                            padding-bottom: 0.3rem;
                         }
                         &__bordure{
-                            border-top:solid 7px $couleur-tertiaire;
-                            width: 10%;
+                            border-top:solid 3px $couleur-tertiaire;
+                            width: 15%;
                             @include destock{
                                 margin-top:-5px;
                             }
@@ -592,37 +436,37 @@
                             &__card{
                                 cursor: pointer;
                                 background-color: rgb(250, 250, 250);
-                                border-radius:20px;
+                                border-radius:25px;
                                 position:relative;
-                                height: 175px;
-                                margin-top:30px;
+                                height: 70px;
+                                margin-top:1rem;
                                 &:hover{
                                     background-color: red;
                                 }
                                 &__text{
                                     font-family:$font2;
-                                    padding-left:2em;
+                                    padding-left:1rem;
                                     margin:0px;
                                     &__niv1{
                                         margin:0px;
-                                        padding-top:1em;
-                                        font-size:2.6em;
+                                        padding-top:1rem;
+                                        font-size:1rem;
                                         font-weight: bold;
-                                        padding-bottom:0.3em;
+                                        padding-bottom:0.3rem;
                                         }
                                     &__niv2{
                                         margin:0px;
-                                        font-size:2.3em;
-                                        padding-bottom:1em;
+                                        font-size:0.9rem;
+                                        padding-bottom:1rem;
                                         }
                                 }
                                 &__prix{
                                     position: absolute;
                                     font-family: $font2;
-                                    font-size: 2.3em;
+                                    font-size: 1rem;
                                     font-weight: bold;
-                                    top:75px;
-                                    right:50px;
+                                    top:7px;
+                                    right:15px;
                                 }
                             }//card
                             
@@ -653,9 +497,9 @@
     
             .footer{
                 background-color: black;
-                height:40em;
+                height:13rem;
                 color: white;
-                padding-left: 2em;
+                padding-left: 2rem;
                 &__bloc{
                     @include footer__bloc;
     
@@ -669,13 +513,11 @@
                 &--titre{
                     @include footer--titre;
                     @include destock {
-                        font-size:4em;
+                        font: size 2rem;
                     }
                 }
                 &--texte{
                     @include footer--texte;
-                    font-size: 2.4em;
-                    
                     @include destock{
                         font-size: 3em;
                     }

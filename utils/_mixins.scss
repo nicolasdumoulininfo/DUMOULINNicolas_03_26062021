@@ -6,19 +6,27 @@
 @mixin header__titreprincipal{
     font-family:"shrikhand";
     color:black;
-    font-size: 4.5rem;
+    font-size: 2.1rem;
     font-weight: bolder;
     text-align: center;
     margin-bottom:1.5rem;
     position: relative;
+}
 
+@mixin header__titremenu{
+    font-family:"shrikhand";
+    color:black;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    text-align: center;
 }
 
 //Titre h2 pour Partie Fonctionnement / Restaurant=====================================
 @mixin titre{
     font-family: "roboto";
-    padding-left: 2.2rem;
-    font-size: 3.9rem;
+    padding-left: 1.4rem;
+    padding-bottom: 1rem;
+    font-size: 1.6rem;
     @include destock{
         font-size:2.5em;
     }
@@ -34,11 +42,16 @@
 }
 @mixin footer__bloc__icone{
     width: 6%;
-    font-size: 2em;
+    font-size: 1rem;
     margin-bottom: 0.5em;
     margin-top:0px;
     padding-bottom: 0px;
     padding-top: 0px;
+    padding-right: 0.4rem;
+    @include destock{
+        width: 2%
+    }
+
 }
 @mixin footer__bloc__text{
     margin-bottom: 0px;
@@ -59,9 +72,7 @@
     margin-top:0px;
     padding-top: 1em;
     font-family:$font1;
-    font-size: 3.2em;
-    font-style: italic;
-    font-weight:bolder;
+    font-size: 1.3rem;
 }
 //Media queries=======================================
 

@@ -1,0 +1,38 @@
+.headerresto{
+    display: grid;
+    grid-template-areas:
+    "fleche titre"
+    "image image";
+    grid-template-columns: 12% auto;
+    grid-template-rows:15% auto;
+
+    h1{
+        grid-area:titre;
+        @include header__titremenu;
+        justify-content:center;
+        align-content: center;
+        color:red;
+    }
+
+    a{
+        grid-area: fleche;
+        text-decoration: none;
+        color:black;
+        
+    }
+    i{
+        grid-area: fleche;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+    img{
+        grid-area: image;
+        width:100%;
+        object-fit: cover;
+    }
+}
