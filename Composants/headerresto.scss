@@ -7,8 +7,8 @@
     grid-template-rows:15% auto;
 
     h1{
-        grid-area:titre;
         @include header__titremenu;
+        grid-area:titre;
         justify-content:center;
         align-content: center;
         color:red;

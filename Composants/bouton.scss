@@ -1,14 +1,14 @@
 //Les boutons================================================================
 .btn{
     color:white;
-    background: linear-gradient($couleur-secondaire,$couleur-primaire);
+    background: $couleur-bouton;
     cursor: pointer;
     border-radius: 10rem;
     padding: 1.3rem 1.6rem;
     font-family: $font2;
     font-weight: 500;
     &:hover {
-        background: linear-gradient($couleur-secondaire-lighten,$couleur-primaire-lighten);
+        background: $couleur-btn-hover;
     }
     &--explorernosrestaurant{
         font-size: 1rem;
@@ -23,7 +23,6 @@
         margin-top:0.3em;
         width:10em;
         font-size:1.1rem;
-        
     }
 }
 

@@ -16,7 +16,7 @@ article.resto {
     @include phone{
       margin-bottom: 1rem;
     }
-
+   
   a {
     grid-area: image;
   }
@@ -47,20 +47,20 @@ article.resto {
     margin-top: 0px;
   }
   img{
-
     width:100%;
     object-fit: cover;
     border-radius: 20px 20px 0 0 ;
+    @include destock{
+      min-height:400px;
+    }
   }
   &.nouveau::after{
       content:"Nouveau";
       display: flex;
-      //j'enleve le width ça rajoute une longueur a la ongueur du mor par defaut
-      //et j'ajoute du padding width: 8.5rem;
       height: 1.7rem;
       justify-self: center;
       //========j'ajoute
-      color:green;
+      color:$couleur-text-nouveau;
       grid-column-start: 1;
       grid-row-start: 1;
       justify-self: flex-end;
