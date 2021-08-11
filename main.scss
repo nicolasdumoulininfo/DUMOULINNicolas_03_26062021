@@ -7,12 +7,13 @@
     @import "./Composants/bouton";
     @import "./Composants/footer";
     @import "./composants/headerresto";
+    @import "./composants/loadingspiner";
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
 //Page index.html partie header======================================================================
 .site{
 
-    .header{
+    .headerindex{
         width:100%;
 
         &__titreprincipal{
@@ -42,7 +43,7 @@
                     grid-template-columns: 1fr 1fr 1fr;
                     grid-template-rows: 1fr;
                     background-color:$couleur-fond-gris-local;
-                    box-shadow:inset 1px 6px rgb(190, 190, 187, 0.3);
+                    box-shadow:inset 1px 6px rgba(10, 10, 7, 0.3);
                     width: 100%;
                     &__icone{
                         grid-area: icone;
@@ -114,7 +115,7 @@
                     }
                }
        }
-    }//header
+    }//headerindex
 
     //Page index.html Partie Fonctionnement===================================================
     
@@ -445,75 +446,3 @@
             
         }//body
         
-//animation bouton validation en cours//
-        .btn-ok{ 
-            position:flex;
-            height: 100%;
-            width: 2em;
-            right:0px;
-            border-radius: 0px 20px 20px 0;
-            transition: all 800ms;
-            background-color: $couleur-tertiaire;
-            &:hover{
-                transform-origin:100%;
-                transform: scaleX(1);  
-            }
-        }//btn-ok
- 
-//essai animation=================================================
-.conteneur-boule{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 25%;
-}
-.imglogo{
-        position: relative;
-        left:60px;
-        opacity:0;
-        animation:anim-logo;
-        animation-duration: 8s;
-        animation-delay: 2s;
-        animation-fill-mode: forwards;
-    }
-.ble{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    padding:15px;
-    margin:15px;
-    position:relative;
-    z-index: 10;
-    
-    &--boule1{
-        background-color:$couleur-primaire;
-        animation: slide-up 1100ms linear 1s 10 normal backwards;
-    }
-    &--boule2{
-        background-color:$couleur-secondaire;
-        animation: slide-up 1100ms linear 1.2s 10 normal backwards;
-    }
-    &--boule3{
-        background-color:$couleur-tertiaire;
-        animation: slide-up 1100ms linear 1.5s 10 normal backwards;
-        
-    }
-
-}//ble
-
-/*.fa-utensils{
-    font-size: 2.8em;
-    padding-left: 5px;
-    font-weight:bold;
-    opacity: 0.8;
-    animation: anim-ronde 13000ms;
-    &--couleur-primaire{
-        color:$couleur-primaire;
-    }
-    &--couleur-secondaire{
-        color:$couleur-secondaire;
-    }
-    &--couleur-tertiaire{
-        color:$couleur-tertiaire;
-    }
-}*/

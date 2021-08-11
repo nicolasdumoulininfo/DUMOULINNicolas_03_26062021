@@ -1,23 +1,29 @@
 .headerresto{
     display: grid;
     grid-template-areas:
-    "fleche titre"
-    "image image";
-    grid-template-columns: 12% auto;
+    "fleche titre ."
+    "image image image";
+    grid-template-columns: 1fr auto 1fr;
     grid-template-rows:15% auto;
 
     h1{
-        @include header__titremenu;
+        //@include header__titremenu;
         grid-area:titre;
         justify-content:center;
         align-content: center;
-        color:red;
+        font-family:"shrikhand";
+        color:black;
+        font-size: 2.1rem;
     }
 
     a{
         grid-area: fleche;
         text-decoration: none;
         color:black;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
     }
     i{
