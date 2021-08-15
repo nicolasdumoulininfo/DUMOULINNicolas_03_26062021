@@ -6,13 +6,16 @@
         width:58px;
         height:58px;
         border:10px solid transparent;
-        border-top-color:grey;
-        border-bottom-color:yellow;
+        border-top-color:$couleur-primaire;
+        border-bottom-color:$couleur-secondaire;
         border-radius:50%;
         z-index:3000;
         animation-name:"loading";
         animation-delay:1s;
-        animation-iteration-count:infinite;
+        animation-iteration-count: infinite;
+        transform: rotate(0.5turn);
+        animation-timing-function: linear;
+        
     }
 }
 

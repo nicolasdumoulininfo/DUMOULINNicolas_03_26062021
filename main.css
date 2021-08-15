@@ -546,11 +546,10 @@ article.resto.nouveau::after {
   content: "";
   width: 58px;
   height: 58px;
-  border: 10px solid blue;
-  border-top-color: red;
-  border-bottom-color: yellow;
+  border: 10px solid transparent;
+  border-top-color: blue;
+  border-bottom-color: #ff79da;
   border-radius: 50%;
-  opacity: 0.5;
   z-index: 3000;
   -webkit-animation-name: "loading";
           animation-name: "loading";

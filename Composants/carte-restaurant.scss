@@ -15,6 +15,7 @@ article.resto {
     }
     @include phone{
       margin-bottom: 1rem;
+      
     }
    
   a {
@@ -52,6 +53,9 @@ article.resto {
     border-radius: 20px 20px 0 0 ;
     @include destock{
       min-height:400px;
+    }
+    @include phone{
+      max-height:380px;
     }
   }
   &.nouveau::after{

@@ -40,5 +40,9 @@
         grid-area: image;
         width:100%;
         object-fit: cover;
+        @include destock{
+            height:450px;
+        }
+        
     }
 }

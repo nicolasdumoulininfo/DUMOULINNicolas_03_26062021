@@ -4,35 +4,70 @@
 // Animation chargement page===============================================================
 
 @keyframes loading{
-    to{
+    0%{
         
-        transform: rotate(1turn)
+        transform: rotate(0deg);
+
     }
+
+   100%{
+    
+    transform: rotate(360deg);
+   }
 
 }
 
-@keyframes slide-up { 
-    0%{
-        transform: translateY(0px);
-        opacity: 1;
-    }  
-    25%{
-        transform: translateY(-100px);
-        opacity: 1;
+@keyframes opacity {
+    0%   { 
+        opacity: 0; 
+        overflow: hidden;
     }
-    50%{transform: translateY(0px);
-        opacity: 1;
-
+    7%{
+        opacity: 0.2; 
     }
-    75%{transform: translateY(100px);
-        opacity: 1;
+    9%{
+        opacity: 0.4; 
     }
-
-    100%{
-        transform:translateY(0px);
+    12%{
+        opacity: 0.6; 
+    }
+    15%{
+        opacity: 0.8; 
+    }
+    20%{
         opacity: 1; 
     }
+    80%{
+        opacity: 0.8; 
+    }
+    85%{
+        opacity: 0.6; 
+    }
+    90%{
+        opacity: 0.4; 
+    }
+    95%{
+        opacity: 0.2; 
+    }
+
+    100% {
+        opacity: 0; 
+        overflow: hidden;
+    }
+ }
+// Animation coeur===============================================================
+
+@keyframes anim-coeur { 
+    from{
+        background-position-y: 0rem;
+    } 
+
+    to{
+        background-position-y: 2rem;
+    }
+    
 }
+//=====================================================================================
 
 @keyframes anim-ronde{
     0%{
