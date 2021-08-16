@@ -54,6 +54,14 @@
     background-position-y: 2rem;
   }
 }
+@keyframes anim-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes anim-ronde {
   0% {
     opacity: 0;
@@ -842,6 +850,14 @@ article.resto.nouveau::after {
   .couleur-fond-body .menu__blockctns__ctn__bloc-cards {
     min-width: 21rem;
   }
+}
+.couleur-fond-body .menu__blockctns__ctn__bloc-cards:nth-child(1) {
+  transition: all 2s;
+  animation-name: "anim-menu";
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
 }
 .couleur-fond-body .menu__blockctns__ctn__bloc-cards__card {
   cursor: pointer;

@@ -38,6 +38,20 @@ article.resto {
     justify-self: flex-end;
     align-self: center;
     padding-right: 2rem;
+    &:hover{
+      //font-weight:bold;
+      font-weight:bold;
+      background: -webkit-linear-gradient(white,$couleur-primaire);
+      //background: linear-gradient($couleur-primaire 50%, white 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-duration:5s;
+      animation-name: anim-coeur;
+      animation-fill-mode: forwards;
+      animation-delay:0;
+    }
   }
   address {
     grid-area: adresse;

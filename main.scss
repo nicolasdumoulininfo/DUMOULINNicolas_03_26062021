@@ -389,6 +389,16 @@
                             @include destock{
                                 min-width:21rem;
                             }
+                            &:nth-child(1){
+                                transition: all 2s;
+                                animation-name:"anim-menu";
+                                animation-delay: 2s;
+                                animation-duration:2s;
+                                animation-iteration-count: 1;
+                                animation-fill-mode: backwards;
+                               
+
+                            }
                             &__card{
                                 cursor: pointer;
                                 background-color: rgb(250, 250, 250);
